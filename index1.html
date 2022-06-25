@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="shortcut icon" href="res/logo-mini.png" type="image/x-icon">
+    <meta property="og:image" content="res/logo.jpg">
+    <title>В-СМС</title>
+    <!-- ioicons -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" /> -->
+    <!-- ioicons -->
+
+    <link rel="stylesheet" href="ChiefSlider/chief-slider.css">
+
+    <!-- <script
+			  src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+			  integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+			  crossorigin="anonymous"></script> -->
+        <script
+			  src="https://code.jquery.com/jquery-3.6.0.js"
+			  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+			  crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">
+            <img src="res/logo.png" alt="">
+        </div>
+
+        <div class="right-bar">
+            <div class="topic-container">
+                <div class="topics active" id="callme1" onclick="changeTopic(this.id)">
+                    <h3>Главная</h3>
+                    <div class="topics-underline active" id="cm1u"></div>
+                </div>
+
+                <div class="topics" id="callme2" onclick="changeTopic(this.id)">
+                    <h3>Услуги</h3>
+                    <div class="topics-underline" id="cm2u"></div>
+                </div>
+                <div class="topics" id="callme3" onclick="changeTopic(this.id)">
+                    <h3>Направления работы</h3>
+                    <div class="topics-underline" id="cm3u"></div>
+                </div>
+                <div class="topics" id="callme4" onclick="changeTopic(this.id)">
+                    <h3>Заявка</h3>
+                    <div class="topics-underline" id="cm4u"></div>
+                </div>
+                <div class="topics" id="callme5" onclick="changeTopic(this.id)">
+                    <h3>Оборудование</h3>
+                    <div class="topics-underline" id="cm5u"></div>
+                </div>
+                <div class="topics" id="callme6" onclick="changeTopic(this.id)">
+                    <h3>Контакты</h3>
+                    <div class="topics-underline" id="cm6u"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="header-menu-container" >
+
+            <div class="contact-us-icon" id="contact-us-icon">
+                <ion-icon name="mail-unread-outline"></ion-icon>
+            </div>
+            <div class="header-menu" onclick="ToggleHMenu()">
+                <ion-icon name="menu-outline"></ion-icon>
+            </div>
+        </div>
+       
+    </div>
+    </div>
+    <!-- Header -->
+    <!-- Main -->
+    <main>
+        <div class="h-mobile-menu">
+                    
+            <div class="mtopics" id="mcallme1">
+                <h3>Главная</h3>
+              
+            </div>
+            <div class="mtopics" id="mcallme2">
+                <h3>Услуги</h3>
+              
+            </div>
+            <div class="mtopics" id="mcallme3">
+                <h3>Направления</h3>
+               
+            </div>
+            <div class="mtopics" id="mcallme4">
+                <h3>Заявка</h3>
+              
+            </div>
+            <div class="mtopics" id="mcallme5">
+                <h3>Оборудование</h3>
+               
+            </div>
+            <div class="mtopics" id="mcallme6">
+                <h3>Контакты</h3>
+               
+            </div>
+
+        </div>
+        <div class="preview sections" id="sec1">
+         
+          <div class="preview-background">
+              <div class="prewiev-waves">
+                <svg  viewBox="0 0 1347 276" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 275.234L56.125 255.575C112.25 235.915 181.056 220.02 293.306 174.148C405.556 128.276 585.616 288.34 697.866 275.234C810.116 262.128 898 13.2732 1010.25 46.0391C1122.5 78.8051 1172.3 46.0391 1249.54 46.0391L1347 124.106V0L1290.87 0C1234.75 0 1122.5 0 1010.25 0C898 0 785.75 0 673.5 0C561.25 0 449 0 336.75 0C224.5 0 112.25 0 56.125 0L0 0L0 275.234Z" fill="#FFEDAF" fill-opacity="0.58"/>
+                </svg>
+                <svg  viewBox="0 0 1348 273" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 273L56.1667 253.357C112.333 233.714 185.791 128.952 298.124 83.119C410.458 37.2857 590.651 187.881 702.984 174.786C815.318 161.69 898.667 50.381 1011 83.119C1123.33 115.857 1129.93 58 1207.22 58L1348 122V-2L1291.83 -2C1235.67 -2 1123.33 -2 1011 -2C898.667 -2 786.333 -2 674 -2C561.667 -2 449.333 -2 337 -2C224.667 -2 112.333 -2 56.1667 -2L0 -2L0 273Z" fill="#FFEDAF" fill-opacity="0.58"/>
+                </svg>
+                  
+              </div>
+                
+                <div class="color-block"></div>
+                <img src="res/untitled11.png" alt="">
+                <!-- <img src="res/untitled11.png" alt=""> -->
+            </div>
+            <div class="preview-info-block">
+              <h1>В-СМС</h1>
+              <div>
+                <h2 class="big">Только</h2>
+                <h2 class="small">промышленное оборудование</h2>
+              </div>
+              <span>Комплектация, поставки, сервис, монтаж</span>
+                <!-- <span>Вентиляция, отопление, холодоснабжение, дымоудаление</span> -->
+                <button class="call-request">Оставить заявку</button>
+            </div>
+        </div>
+        <div class="services sections" id="sec2">
+            <div class="title" id="uslugi">
+                <h1>НАШИ УСЛУГИ
+                    <div class="title-underline"></div>
+                </h1>
+            </div>
+
+            <div class="service-cards-container">
+                <div class="service-card">
+                    <div class="card-logo" id="cl1"></div>
+                    <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et eget convallis
+                        condimentum sapien faucibus purus ullamcorper congue dignissim.Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Et eget convallis condimentum sapien faucibus purus ullamcorper
+                        congue dignissim.</div>
+
+                    <div class="card-title">Комплектация</div>
+                </div>
+                <div class="service-card">
+                    <div class="card-logo" id="cl2"></div>
+                    <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et eget convallis
+                        condimentum sapien faucibus purus ullamcorper congue dignissim. ipsum dolor sit amet,
+                        consectetur adipiscing elit. Et eget convallis condimentum sapien faucibus purus ullamcorper
+                        congue dignissim.</div>
+                    <div class="card-title">Поставка</div>
+                </div>
+                <div class="service-card">
+                    <div class="card-logo" id="cl3"></div>
+                    <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et eget convallis
+                        condimentum sapien faucibus purus ullamcorper congue dignissim. ipsum dolor sit amet,
+                        consectetur adipiscing elit. Et eget convallis condimentum sapien faucibus purus ullamcorper
+                        congue dignissim.</div>
+
+                    <div class="card-title">Сервис</div>
+                </div>
+                <div class="service-card">
+                    <div class="card-logo" id="cl4"></div>
+                    <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et eget convallis
+                        condimentum sapien faucibus purus ullamcorper congue dignissim. ipsum dolor sit amet,
+                        consectetur adipiscing elit. Et eget convallis condimentum sapien faucibus purus ullamcorper
+                        congue dignissim.</div>
+
+                    <div class="card-title">Монтаж</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="work-areas-container sections" id="sec3">
+            <div class="title ">
+                <h1 class="t-white">НАПРАВЛЕНИЯ РАБОТЫ
+                    <div class="title-underline t-white"></div>
+                </h1>
+            </div>
+
+
+            <div class="wa-info">
+                <div class="wa-parallelogram"></div>
+                <div class="wa-inside">
+                    <div class="wa-number">01</div>
+                    <div class="wa-logo" id="wal1"></div>
+                    <div class="wa-ins-content">
+                        <div class="wa-title">Вентиляция</div>
+                        <div class="wa-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et eget convallis
+                            condimentum sapien faucibus purus ullamcorper congue dignissim.</div>
+                    </div>
+                </div>
+                <div class="wa-underline"></div>
+            </div>
+            <div class="wa-info">
+                <div class="wa-parallelogram"></div>
+                <div class="wa-inside">
+                    <div class="wa-number wa-odd-n">02</div>
+                    <div class="wa-logo" id="wal2"></div>
+                    <div class="wa-ins-content wa-odd-c">
+                        <div class="wa-title">Вентиляция</div>
+                        <div class="wa-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et eget convallis
+                            condimentum sapien faucibus purus ullamcorper congue dignissim.</div>
+                    </div>
+                </div>
+                <div class="wa-underline"></div>
+            </div>
+
+            <div class="wa-info">
+                <div class="wa-parallelogram"></div>
+                <div class="wa-inside">
+                    <div class="wa-number">03</div>
+                    <div class="wa-logo" id="wal3"></div>
+                    <div class="wa-ins-content">
+                        <div class="wa-title">Вентиляция</div>
+                        <div class="wa-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et eget convallis
+                            condimentum sapien faucibus purus ullamcorper congue dignissim.</div>
+                    </div>
+                </div>
+                <div class="wa-underline"></div>
+            </div>
+
+            <div class="wa-info">
+                <div class="wa-parallelogram"></div>
+                <div class="wa-inside">
+                    <div class="wa-number wa-odd-n">04</div>
+                    <div class="wa-logo" id="wal4"></div>
+                    <div class="wa-ins-content wa-odd-c">
+                        <div class="wa-title">Вентиляция</div>
+                        <div class="wa-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et eget convallis
+                            condimentum sapien faucibus purus ullamcorper congue dignissim.</div>
+                    </div>
+                </div>
+                <div class="wa-underline"></div>
+            </div>
+
+
+        </div>
+
+        <div class="leave-request-container sections" id="sec4 ">
+            <div class="circle" id="cir1"></div>
+            <div class="circle" id="cir2"></div>
+            <div class="request-container">
+                <div class="title">
+                    <h1 class="transparent-border">Оставьте заявку
+                        <div class="title-underline"></div>
+                    </h1>
+                </div>
+                <div class="inp-container">
+                  <div class="text-req">Введите ваше имя</div>
+                  <div class="text-req">Введите ваш email</div>
+                  <input type="text" name="" id="reqname" class="req-input" placeholder="Ваше имя">
+                
+                
+                <!-- <input type="email" name="" id="" class="req-input" placeholder="Ваш email"> -->
+                <form action="sandmail.php">
+                  <input type="email" placeholder="Enter your email" required maxlength="50">
+                  <textarea name="message" id="" cols="30" rows="10"></textarea>
+                  <input type="submit" value="Submit">
+                  </form>
+                  
+             
+              </div>
+   
+                <button class="req-btn">Оставить заявку</button>
+            </div>
+        </div>
+
+
+        <!-- Наши преимущества -->
+        <div class="our-avanteges-container">
+            <div class="title ">
+                <h1 class="t-ywb">Наши преимущества
+                    <div class="title-underline t-ywb"></div>
+                </h1>
+            </div>
+            <div class="avantages-container">
+                <div class="avantage">
+                    <div class="av-logo"><img src="res/2_1-icon.png" alt=""></div>
+                    <div class="av-text">Гарантия качества</div>
+                </div>
+                <div class="avantage">
+                    <div class="av-logo"><img src="res/2_2-icon.png" alt=""></div>
+                    <div class="av-text">Быстрая доставка</div>
+                </div>
+                <div class="avantage">
+                    <div class="av-logo"><img src="res/2_3-icon.png" alt=""></div>
+                    <div class="av-text">Качественный сервис</div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- Наши преимущества -->
+
+
+        <!-- ОБОРУДОВАНИЕ -->
+        <div class="equipment-container sections" id="sec5">
+            <div class="title ">
+                <h1 class="">ОБОРУДОВАНИЕ
+                    <div class="title-underline"></div>
+                </h1>
+            </div>
+
+            
+            <div class="equipment-carusel">
+                <link rel="stylesheet" href="ChiefSlider/chief-slider.css">
+                <style>
+                    .container {
+                      max-width: 350px;
+                      margin: 0 auto;
+                      
+                    }
+                
+                    @media (min-width: 768px) {
+                      .container {
+                        max-width: 700px;
+                        margin: 0 auto;
+                      }
+                    }
+                
+                    @media (min-width: 1200px) {
+                      .container {
+                        max-width: 1050px;
+                        margin: 0 auto;
+                      }
+                    }
+                
+                    .slider__wrapper {
+                      overflow: hidden;
+                      margin-left: -5px;
+                      margin-right: -5px;
+                    }
+                
+                    .slider__item {
+                      flex: 0 0 100%;
+                      max-width: 100%;
+                    }
+                    .slider__item .insidessss {
+                      width: 257px;
+                    height: 300px;
+                    background: #E3E3E3;
+                    border-radius: 16px;
+                    }
+                    
+                    @media (min-width: 768px) {
+                      .slider__item {
+                        flex: 0 0 50%;
+                        max-width: 50%;
+                      }
+                    }
+                
+                    @media (min-width: 1200px) {
+                      .slider__item {
+                        flex: 0 0 33.3333333333%;
+                        max-width: 33.3333333333%;
+                      }
+                    }
+                
+                    .slider__item-content {
+                      padding-left: 5px;
+                      padding-right: 5px;
+                    }
+                
+                    .slider__content_header {
+                      position: relative;
+                    }
+                
+                    .slider__content_img {
+                      width: 206px;
+                      height: 197px;
+                      display: block;
+                      margin: auto;
+                      height: auto;
+                      max-width: 100%;
+                    }
+                
+                    .slider__content_section {
+                      position: absolute;
+                      bottom: 6px;
+                      left: 10px;
+                      background-color: rgba(0, 0, 0, 0.5);
+                      color: #fff;
+                      padding: 6px 10px;
+                      font-size: 14px;
+                      border-radius: 12px;
+                      line-height: 1;
+                    }
+                
+                    .slider__content_title {
+                        min-height: 75px;
+                      background: #fafafa;
+                      ;
+                      color: #424242;
+                      white-space: normal;
+                      font-weight: 700;
+                      font-size: 20px;
+                      line-height: 1.3;
+                      padding: 10px 15px;
+                      margin: 0;
+                    }
+                
+                    .slider__content_footer {
+                      background: #fafafa;
+                      ;
+                      display: flex;
+                      padding: 20px 15px;
+                      color: #616161;
+                    }
+                
+                    .slider__content_avatar {
+                      flex: 0 0 40px;
+                      max-width: 40px;
+                    }
+                
+                    .slider__content_photo {
+                      display: block;
+                      height: auto;
+                      max-width: 100%;
+                      border-radius: 50%;
+                    }
+                
+                    .slider__content_author {
+                      margin-left: 8px;
+                      line-height: 40px;
+                    }
+                
+                    .slider__content_icon {
+                      height: 18px;
+                      margin-top: 12px;
+                      margin-left: auto;
+                    }
+                
+                    .slider__content_views {
+                      margin-left: 4px;
+                      line-height: 40px;
+                    }
+                
+                    .slider__control {
+                      background-color: unset;
+                      background-color: rgba(0, 0, 0, 0.1);
+                      margin-left:-50px!important;
+                      margin-right: -50px!important;
+                      margin-top: -50px!important;
+                    }
+                   @media (max-width:800px) {
+                    .slider__control {
+                      margin-left:0!important;
+                      margin-right: 0!important;
+                      margin-top: 0!important;
+                    }
+                   }
+                
+                    .slider__control:hover,
+                    .slider__control:focus {
+                      background-color: rgba(0, 0, 0, 0.288);
+                    }
+                
+                    .slider__indicators {
+                      bottom: -35px;
+                    }
+                
+                    .slider__indicators li {
+                      background-color: #eee;
+                    }
+                
+                    .slider__indicators li.active {
+                      background-color: #FFEB3D;
+                    }
+                  </style>
+                <div class="container">
+
+                    <div class="slider" data-slider="chiefslider">
+                      <div class="slider__container">
+                        <div class="slider__wrapper">
+                          <div class="slider__items">
+                            <div class="slider__item">
+                              
+                              <div class="slider__item-container">
+                                <div class="slider__item-content">
+                
+                                  <div class="slider__content_header">
+                                    <img class="slider__content_img" src="res/3_1-image.png"
+                                      alt="..." width="350" height="250" loading="lazy">
+                                    <!-- <span class="slider__content_section">Совет эксперта</span> -->
+                                  </div>
+                                  <h2 class="slider__content_title">Отопительное оборудование</h2>
+                                 
+                
+                                </div>
+                              </div>
+                            </div>
+                            <div class="slider__item">
+                              <div class="slider__item-container">
+                                <div class="slider__item-content">
+                
+                                  <div class="slider__content_header">
+                                    <img class="slider__content_img"  src="res/3_2-image.png"
+                                      alt="..." width="350" height="250" loading="lazy">
+                                    <!-- <span class="slider__content_section">Подборка</span> -->
+                                  </div>
+                                  <h2 class="slider__content_title">Отопительное оборудование</h2>
+                                  
+                
+                                </div>
+                              </div>
+                            </div>
+                            <div class="slider__item">
+                              <div class="slider__item-container">
+                                <div class="slider__item-content">
+                
+                                  <div class="slider__content_header">
+                                    <img class="slider__content_img"  src="res/3_3-image.png"
+                                      alt="..." width="350" height="250" loading="lazy">
+                                    <!-- <span class="slider__content_section">Подборка</span> -->
+                                  </div>
+                                  <h2 class="slider__content_title">Отопительное оборудование</h2>
+                                  
+                
+                                </div>
+                              </div>
+                            </div>
+                            <div class="slider__item">
+                              <div class="slider__item-container">
+                                <div class="slider__item-content">
+                
+                                  <div class="slider__content_header">
+                                    <img class="slider__content_img"  src="res/3_4-image.png"
+                                      alt="..." width="350" height="250" loading="lazy">
+                                    <!-- <span class="slider__content_section">Подборка</span> -->
+                                  </div>
+                                  <h2 class="slider__content_title">Отопительное оборудование</h2>
+                                  
+                
+                                </div>
+                              </div>
+                            </div>
+                            <div class="slider__item">
+                              <div class="slider__item-container">
+                                <div class="slider__item-content">
+                
+                                  <div class="slider__content_header">
+                                    <img class="slider__content_img"  src="res/3_5-image.png"
+                                      alt="..." width="350" height="250" loading="lazy">
+                                    <!-- <span class="slider__content_section">Подборка</span> -->
+                                  </div>
+                                  <h2 class="slider__content_title">Отопительное оборудование</h2>
+                                 
+                
+                                </div>
+                              </div>
+                            </div>
+                
+                            
+                
+                          </div>
+                        </div>
+                      </div>
+                      <a href="#" class="slider__control" data-slide="prev"></a>
+                      <a href="#" class="slider__control" data-slide="next"></a>
+                      <ol class="slider__indicators">
+                        <li data-slide-to="0"></li>
+                        <li data-slide-to="1"></li>
+                        <li data-slide-to="2"></li>
+                        <li data-slide-to="3"></li>
+                        <li data-slide-to="4"></li>
+                      </ol>
+                    </div>
+                
+                  </div>
+                
+                  <script src="ChiefSlider/chief-slider.js"></script>
+                
+                  <script>
+                    const $slider = document.querySelector('[data-slider="chiefslider"]');
+                    const slider = new ChiefSlider($slider, {
+                      loop: true,
+                      autoplay: true,
+                      interval: 5000,
+                      refresh: true,
+                      swipe: true
+                    });
+                  </script>
+                  
+            </div>
+        </div>
+
+    </main>
+    <!-- ОБОРУДОВАНИЕ -->
+    <!-- Main -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="upper-footer sections" id="sec6">
+            <div class="uf-container">
+                <div class="uf-contacts">
+                    <div class="uf-title">Контакты</div>
+                    <div class="contopics"><ion-icon class="con-logo" name="navigate-circle-outline"></ion-icon><p>+7 (999) 999 99 99</p></div>
+                    <div class="contopics"><ion-icon class="con-logo" name="navigate-circle-outline"></ion-icon><p>email@email.com</p></div>
+                    <div class="contopics"><ion-icon class="con-logo" name="navigate-circle-outline"></ion-icon><p>г. Москва, ул. Тверская, д.123</p></div>
+                </div>
+                <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d577325.3464228384!2d36.825139684750134!3d55.581524479088806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54afc73d4b0c9%3A0x3d44d6cc5757cf4c!2z0JzQvtGB0LrQstCw!5e0!3m2!1sru!2sru!4v1655481127494!5m2!1sru!2sru"style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+            </div>
+        </div>
+        <div class="lower-footer">
+            <span>© 2022 “В-СМС”. Все права защищены.</span>
+        </div>
+    </footer>
+    <!-- Footer -->
+
+    <script src="script/script.js/script.js"></script>
+</body>
+
+</html>
